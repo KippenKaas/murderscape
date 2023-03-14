@@ -9,6 +9,7 @@ public class GitHandler : MonoBehaviour
     public static void InsertGit()
     {
         Debug.Log("Starting Insert GitHub...");
+        System.Diagnostics.Process.Start("CMD.exe", "/C git add Assets/*");
         System.Diagnostics.Process.Start("CMD.exe", "/C git commit -a -m 'update'");
         System.Diagnostics.Process.Start("CMD.exe", "/C git push origin master");
     } 
